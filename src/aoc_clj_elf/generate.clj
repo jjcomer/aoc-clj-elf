@@ -1,11 +1,13 @@
 (ns aoc-clj-elf.generate
   (:require [babashka.fs :as fs]
+            [clojure.java.io :as io]
             [clojure.string :as str] 
             [bling.core :as bling]))
 
 (defn generate-solution
-  [solution-template year day]
-  (let [safe-year (str "y" year)
+  [year day]
+  (let [solution-template (io/resource "solution.template")
+        safe-year (str "y" year)
         safe-day (str "d" day)
         solution-filename (str safe-day ".clj")
         solution-path (fs/path "src" safe-year)

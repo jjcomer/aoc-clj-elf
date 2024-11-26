@@ -18,11 +18,11 @@
       (println (util/show-help util/general-input-spec))
       (runner/run-tests year day))))
 
-(defn gen-new-task [solution-template args]
+(defn gen-new-task [args]
   (let [{:keys [help year day]} (cli/parse-opts args util/general-input-spec)]
     (if help
       (println (util/show-help util/general-input-spec))
-      (generate/generate-solution solution-template year day))))
+      (generate/generate-solution year day))))
 
 (defn get-input-task [auth-file input-dir args]
   (let [{:keys [help year day]} (cli/parse-opts args util/general-input-spec)]
