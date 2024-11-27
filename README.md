@@ -34,7 +34,7 @@ Create a new empty repo and include a `bb.edn` file in the root. Add the followi
 
 ```clojure
 {:paths ["src"]
- :deps {com.github.jjcomer/aoc-clj-elf {:mvn/version "4ce43c9"}}
+ :deps {com.github.jjcomer/aoc-clj-elf {:mvn/version "0.1.0"}}
  :mvn/repos {"jitpack" {:url "https://jitpack.io"}}
  :tasks {:requires ([babashka.fs :as fs]
                     [aoc-clj-elf.core :as aoc])

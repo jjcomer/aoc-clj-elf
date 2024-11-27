@@ -1,6 +1,6 @@
-(defproject aoc-clj-elf "0.1.0-SNAPSHOT"
+(defproject aoc-clj-elf "0.1.0"
   :description "A clojure/babashka library for managing Advent of Code solutions"
-  :url "http://example.com/FIXME"
+  :url "https://github.com/jjcomer/aoc-clj-elf"
   :license {:name "Unlicense"
             :url "https://unlicense.org"}
   :dependencies [[org.clojure/clojure "1.11.1"]
