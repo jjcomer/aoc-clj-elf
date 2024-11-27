@@ -8,4 +8,5 @@
                  [org.babashka/cli "0.8.61"]
                  [org.babashka/http-client "0.4.22"]
                  [babashka/fs "0.5.22"]]
+  :resource-paths ["resources"]
   :repl-options {:init-ns aoc-clj-elf.core})
