@@ -48,10 +48,9 @@
       (do
         (when-not (fs/exists? solution-path)
           (fs/create-dir solution-path))
-        (-> solution-template
-            slurp
+        (-> solution-template 
             (str/replace #"__YEAR__" (str year))
             (str/replace #"__DAY__" (str day))
             (#(spit (str full-path) %)))
         (bling/callout {:level :positive}
-                       (str "Created template for year %s and day %s at %s" year day (str full-path)))))))
+                       (format "Created template for year %s and day %s at %s" year day (str full-path)))))))
