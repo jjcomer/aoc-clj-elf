@@ -1,17 +1,21 @@
 (ns aoc-clj-elf.util
-  (:import java.time.LocalDate)
+  (:import [java.time ZonedDateTime ZoneId]) 
   (:require [babashka.cli :as cli]
             [clojure.string :as str]))
 
+(def aoc-zone (ZoneId/of "America/New_York"))
+
 (defn get-current-day
-  "Returns the numeric value of the day"
+  "Returns the numeric value of the day in EST (America/New_York)"
   []
-  (.getDayOfMonth (LocalDate/now)))
+  (let [now (.toLocalDate (ZonedDateTime/now aoc-zone))]
+    (.getDayOfMonth now)))
 
 (defn get-current-year
-  "Returns the current year"
+  "Returns the current year in EST (America/New_York)"
   []
-  (.getYear (LocalDate/now)))
+  (let [now (.toLocalDate (ZonedDateTime/now aoc-zone))]
+    (.getYear now)))
 
 (defn gen-solution-ns
   [year day]

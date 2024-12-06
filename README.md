@@ -34,7 +34,7 @@ Create a new empty repo and include a `bb.edn` file in the root. Add the followi
 
 ```clojure
 {:paths ["src"]
- :deps {com.github.jjcomer/aoc-clj-elf {:mvn/version "0.1.0"}}
+ :deps {com.github.jjcomer/aoc-clj-elf {:mvn/version "0.1.1"}}
  :mvn/repos {"jitpack" {:url "https://jitpack.io"}}
  :tasks {:requires ([babashka.fs :as fs]
                     [aoc-clj-elf.core :as aoc])
@@ -141,6 +141,9 @@ If you would like to change the templated solution files, the template is found 
 * Add docs on finding session cookie
 
 ## Changelog
+
+### 2024-12-05 -- 0.1.1
+* Use the correct timezone for AoC -- Thanks to @jacoobes
 
 ### 2024-11-26
 * Converted all logic to a library to make upgrading much much easier

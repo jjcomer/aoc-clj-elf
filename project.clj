@@ -1,4 +1,4 @@
-(defproject aoc-clj-elf "0.1.0"
+(defproject aoc-clj-elf "0.1.1"
   :description "A clojure/babashka library for managing Advent of Code solutions"
   :url "https://github.com/jjcomer/aoc-clj-elf"
   :license {:name "Unlicense"
