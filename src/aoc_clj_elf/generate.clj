@@ -1,6 +1,5 @@
 (ns aoc-clj-elf.generate
-  (:require [babashka.fs :as fs]
-            [clojure.java.io :as io]
+  (:require [babashka.fs :as fs] 
             [clojure.string :as str] 
             [bling.core :as bling]))
 
