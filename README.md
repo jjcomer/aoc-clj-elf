@@ -1,5 +1,7 @@
 # aoc-clj-elf
 
+[![Clojars Project](https://img.shields.io/clojars/v/io.github.jjcomer/aoc-clj-elf.svg)](https://clojars.org/io.github.jjcomer/aoc-clj-elf)
+
 ## Overview 
 Clojure based [AOC](http://adventofcode.com) helper.
 
@@ -34,8 +36,7 @@ Create a new empty repo and include a `bb.edn` file in the root. Add the followi
 
 ```clojure
 {:paths ["src"]
- :deps {com.github.jjcomer/aoc-clj-elf {:mvn/version "0.1.1"}}
- :mvn/repos {"jitpack" {:url "https://jitpack.io"}}
+ :deps {io.github.jjcomer/aoc-clj-elf {:mvn/version "0.1.2"}}
  :tasks {:requires ([babashka.fs :as fs]
                     [aoc-clj-elf.core :as aoc])
          -input-dir "input"
